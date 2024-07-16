@@ -1,0 +1,489 @@
+@font-face {
+    font-family: daimler_cspro_regular;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/daimlercspro-regular-webfont.eot);
+    src: url(/assets/fonts/daimlercspro-regular-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/daimlercspro-regular-webfont.woff2) format("woff2"), url(/assets/fonts/daimlercspro-regular-webfont.woff) format("woff"), url(/assets/fonts/daimlercspro-regular-webfont.ttf) format("truetype"), url(/assets/fonts/daimlercspro-regular-webfont.svg#daimler_csproregular) format("svg")
+}
+
+@font-face {
+    font-family: daimler_cspro_demi;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/daimlercspro-demi-webfont.eot);
+    src: url(/assets/fonts/daimlercspro-demi-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/daimlercspro-demi-webfont.woff2) format("woff2"), url(/assets/fonts/daimlercspro-demi-webfont.woff) format("woff"), url(/assets/fonts/daimlercspro-demi-webfont.ttf) format("truetype"), url(/assets/fonts/daimlercspro-demi-webfont.svg#daimler_csprodemi) format("svg")
+}
+
+html {
+    color: #666;
+    font-family: daimler_cspro_regular, arial, "sans-serif";
+    font-size: 18px
+}
+
+* {
+    background: none;
+    border: none;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none
+}
+
+html {
+    background: #000;
+    color: #fff
+}
+
+.warp {
+    margin: 0 auto;
+    max-width: 995px;
+    width: 100%
+}
+
+header {
+    border-bottom: 1px solid #474747;
+    padding: 16px 15px
+}
+
+header, header .warp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+header .warp {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-top: 20px
+}
+
+header .logo-mercedes {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex
+}
+
+header .logo-mercedes img.logo {
+    width: 64px
+}
+
+header .logo-mercedes img.baseline {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    color: #fff;
+    height: 34px;
+    margin-left: 66.2px;
+    width: 112px
+}
+
+header .logo-shes {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+header .logo-shes img {
+    height: 79px;
+    width: 87px
+}
+
+main {
+    background: #000;
+    background: -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(20%, #232323), color-stop(80%, #232323), to(#000));
+    background: linear-gradient(0deg, #000, #232323 20%, #232323 80%, #000)
+}
+
+main .warp {
+    background: #fff
+}
+
+main .header {
+    background: #000;
+    padding: 20px 0;
+    position: relative
+}
+
+main .header img {
+    width: 100%
+}
+
+main .header .button, main .header button {
+    bottom: 6px;
+    position: absolute;
+    right: 0
+}
+
+main .form {
+    color: #000;
+    margin: 0 auto;
+    max-width: 770px;
+    padding: 30px 15px
+}
+
+main .form h4, main .form strong {
+    font-family: daimler_cspro_demi, arial, "sans-serif"
+}
+
+main .form h4 {
+    margin-bottom: 20px;
+    text-align: center
+}
+
+main .form h5 {
+    border-bottom: 1px solid #787878;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 30px 0 0;
+    padding-bottom: 5px
+}
+
+main .form ul li {
+    list-style: "- ";
+    margin-left: 10px
+}
+
+main .form .field {
+    margin: 15px 0;
+    position: relative
+}
+
+main .form .field .error {
+    bottom: -20px;
+    color: red;
+    font-size: 12px;
+    left: 0;
+    position: absolute
+}
+
+main .form .field #contact_form_video ~ .error {
+    bottom: 0
+}
+
+main .form .field input[type=date], main .form .field input[type=email], main .form .field input[type=text], main .form .field textarea {
+    border: 1px solid #898989;
+    line-height: 36px;
+    padding: 0 5px
+}
+
+main .form .field textarea {
+    display: block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    resize: none;
+    width: calc(100% - 20px)
+}
+
+main .form .field input[type=radio] {
+    margin-right: 5px
+}
+
+main .form .field label {
+    margin-right: 10px
+}
+
+main .form .fields {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between
+}
+
+main .form .fields .field {
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: calc(50% - 20px)
+}
+
+main .form .fields .field label {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content
+}
+
+main .form .fields .field input[type=date], main .form .fields .field input[type=email], main .form .fields .field input[type=text], main .form .fields .field textarea {
+    width: 100%
+}
+
+main .form .warp-upload-file {
+    border: 1px dashed #000;
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 15px 20px
+}
+
+main .form .warp-upload-file input {
+    display: none
+}
+
+main .form .warp-upload-file .file-name {
+    color: #474747;
+    font-style: italic
+}
+
+main .form progress {
+    width: 100%
+}
+
+main .form progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    margin-top: -20px
+}
+
+main .form progress[value]::-webkit-progress-value {
+    background-color: #00adef
+}
+
+main .form .mentors {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start
+}
+
+main .form .mentors .field {
+    margin: 10px 20px 10px 0;
+    width: calc(33.33333% - 20px)
+}
+
+main .form .contact_form_civility, main .form .hasInstagram {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between
+}
+
+main .form .contact_form_civility p, main .form .hasInstagram p {
+    margin-right: 10px
+}
+
+main .form .contact_form_civility label, main .form .hasInstagram label {
+    border: 1px solid #898989;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    line-height: 36px;
+    margin: 0 0 0 15px;
+    min-width: 150px
+}
+
+main .form .contact_form_civility label .label, main .form .hasInstagram label .label {
+    cursor: pointer;
+    margin: 0 auto;
+    min-width: 125px;
+    text-align: center;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 100%
+}
+
+main .form .contact_form_civility input, main .form .hasInstagram input {
+    display: none
+}
+
+main .form .contact_form_civility input:checked ~ .label, main .form .hasInstagram input:checked ~ .label {
+    background: #00adef;
+    -webkit-box-shadow: 0 0 0 1px #00adef;
+    box-shadow: 0 0 0 1px #00adef;
+    color: #fff
+}
+
+main .form .instagramAccountId {
+    width: 100% !important
+}
+
+main .form .optin {
+    margin: 20px 0
+}
+
+main .form .optin label {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 15px 0
+}
+
+main .form .optin label input {
+    display: none
+}
+
+main .form .optin label input:checked ~ .label:before {
+    background: #00adef;
+    border-color: #00adef
+}
+
+main .form .optin label .label {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+main .form .optin label .label:before {
+    border: 1px solid #898989;
+    content: "";
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 20px;
+    margin-right: 10px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 20px
+}
+
+main .button, main button {
+    background: #00adef;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: daimler_cspro_demi, arial, "sans-serif";
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px auto;
+    max-width: 350px;
+    padding: 10px;
+    text-align: center;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 100%
+}
+
+main .button:hover, main button:hover {
+    background: #0088c6
+}
+
+footer {
+    padding: 40px 15px
+}
+
+footer p a, footer p small {
+    color: #9a9a9a
+}
+
+footer p a, .link {
+    text-decoration: underline
+}
+
+.link {
+    color: #000;
+}
+
+@media (max-width: 640px) {
+    header {
+        border: none;
+        overflow: hidden;
+        padding-bottom: 0
+    }
+
+    header .warp {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        align-items: center;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center
+    }
+
+    header .warp .logo-shes {
+        left: auto;
+        margin-top: 15px;
+        padding-top: 15px;
+        position: relative;
+        -webkit-transform: none;
+        transform: none
+    }
+
+    header .warp .logo-shes:before {
+        border-top: 1px solid #474747;
+        content: "";
+        display: block;
+        height: 1px;
+        left: -50vw;
+        position: absolute;
+        top: 1px;
+        width: 200vw
+    }
+}
+
+@media (max-width: 480px) {
+    main .form {
+        overflow: hidden
+    }
+
+    main .form .fields, main .form .fields .field {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100% !important
+    }
+
+    main .form .fields .field {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start
+    }
+
+    main .form .fields .field input[type=date], main .form .fields .field input[type=email], main .form .fields .field input[type=text] {
+        width: calc(100% - 10px)
+    }
+
+    main .form .field input[type=date], main .form .field input[type=email], main .form .field input[type=text] {
+        line-height: 45px;
+        width: calc(100% - 10px)
+    }
+
+    main .form .contact_form_civility, main .form .hasInstagram {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    main .form .contact_form_civility div, main .form .hasInstagram div {
+        width: 100%
+    }
+
+    main .form .contact_form_civility label, main .form .hasInstagram label {
+        line-height: 45px;
+        margin: 10px 0 !important;
+        width: 100%
+    }
+
+    footer p {
+        text-align: justify
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}">
+    {% block stylesheets %}
+        {# {{ encore_entry_link_tags('app') }} #}
+        <link href="{{ asset('assets/styles/main.min.css') }}" rel="stylesheet"/>
+    {% endblock %}
+
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body>
+
+<header>
+    <div class="warp">
+        <h1 class="logo-mercedes">
+            <a rel="noopener" target="_blank" href="https://www.mercedes-benz.fr/" alt="Mercedes-Benz">
+                <img class="logo" src="assets/images/logos/logo-mercedes.svg" alt=""/>
+            </a>
+        </h1>
+        <h2 class="logo-shes">
+            <a rel="noopener" target="_blank"
+               href="https://www.mercedes-benz.fr/passengercars/the-brand/shes/shes-saison-3.html"
+               alt="She's Mercedes">
+                <img src="assets/images/logos/shes-mercedes-logo-white.svg" alt="She's Mercedes"/>
+            </a>
+        </h2>
+    </div>
+</header>
+
+{% block body %}{% endblock %}
+
+<footer>
+    <div class="warp">
+        <p>
+            <small>
+                © 2024, Mercedes-Benz France SAS. <br>
+                Date limite de participation au 20/03/2024.
+                <br>
+                * Les champs signalés d'un * sont obligatoires. <br><br>
+                Mercedes-Benz France, SAS au capital de 75 516 000€. Siren 622
+                044 287 R.C.S Versailles.<br><br>
+                Conformément aux dispositions de la loi « Informatique et Libertés » n°78-17 du 6 janvier 1978 modifiée
+                et du Règlement européen du 27 avril 2016 relatif à la protection des données des personnes physiques,
+                vous bénéficiez du droit de vous opposer, à tout moment, au traitement des données à caractère personnel
+                vous concernant ayant pour finalité la prospection y compris le profilage dans la mesure où il est lié à
+                une telle prospection. Vous bénéficiez également de droits d'accès et de rectification de celles-ci,
+                d'un droit à l'effacement et d'un droit à la portabilité de ces données, d'un droit à la limitation de
+                leur traitement ainsi que du droit de définir des directives sur le sort, post mortem, de ces
+                données. Vous pouvez exercer ces droits en vous adressant à Mercedes-Benz France – Délégué à la
+                Protection des Données 7, avenue Niépce – 78180 Montigny-le-Bretonneux ou en transmettant votre demande
+                à <a href="mailto:DPO_MBF@daimler.com">DPO_MBF@mercedes-benz.com</a>. Toute demande devra être accompagnée d'une copie, recto-verso, d'une pièce
+                d'identité.<br><br>
+                Nous vous invitons également à parcourir notre politique de confidentialité en
+                <a rel="noopener" target="_blank"
+                   href="https://www.mercedes-benz.fr/passengercars/content-pool/tool-pages/legal/privacy-statement.html">cliquant
+                    ici.</a> <br>
+                <br>
+                <a rel="noopener" target="_blank"
+                   href="{{ asset('assets/documents/reglement-de-participation-au-programme.pdf') }}">Consultez le
+                    règlement de participation ici</a>.
+            </small>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

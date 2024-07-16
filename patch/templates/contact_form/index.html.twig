@@ -1,0 +1,266 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}She's Mercedes{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('assets/js/scripts.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="warp">
+            <div class="header">
+                <h3>
+                    <picture>
+                        <source srcset="{{ asset('assets/images/visuels/visuel-mob.jpg') }}"
+                                media="(max-width: 640px)"/>
+                        <img src="{{ asset('assets/images/visuels/visuel.jpg') }}" alt="She's Mercedes"/></picture>
+                </h3>
+            </div>
+
+            <div class="form">
+                <h4>Formulaire de candidature au programme de mentoring She's Mercedes</h4>
+                <p>
+                    Vous souhaitez participer à la saison 4 du programme <span class="unbreakable">She's Mercedes&nbsp;France ?</span>
+                    <br>
+                    Nous vous invitons à compléter le formulaire ci-dessous, si vous remplissez les critères suivants&nbsp;:
+                <ul>
+                    <li>Vous êtes une <strong>femme entrepreneure</strong> (seule ou à plusieurs avec une femme ou un
+                        homme).
+                    </li>
+                    <li>Votre entreprise est domiciliée en France et a été créée entre <strong>le 1er janvier
+                            2017</strong> et aujourd’hui.
+                    </li>
+                    <li>Votre entreprise <strong>souhaite un accélérateur et bénéficier d'un programme à impact.</strong></li><br>
+                <p>Une finale sera organisée à Paris pour pré-sélectionner 20 projets. Elle se déroulera en présentiel le 26 avril 2024.</p>
+                </ul>
+                <br>
+
+                <small>Si vous entreprenez à plusieurs, nous vous invitons à remplir le nom de la personne qui représentera votre société.</small>
+                </p>
+
+                <div class="form-errors">
+                    <div class="field">
+                        <div id="contact_form_contact_form"></div>
+                        <div class="error"></div>
+                    </div>
+                </div>
+
+                {{ form_start(form, { attr: {novalidate: 'novalidate'} }) }}
+                <div>
+
+                    <h5>Vos informations personnelles&nbsp;:</h5>
+
+                    <div class="fields">
+                        <div class="field">
+                            {{ form_label(form.firstname, 'Prénom*') }}
+                            {{ form_widget(form.firstname) }}
+                            {{ form_errors(form.firstname) }}
+                            <span class="error"></span>
+                        </div>
+                        <div class="field">
+                            {{ form_label(form.lastname, 'Nom*') }}
+                            {{ form_widget(form.lastname) }}
+                            {{ form_errors(form.lastname) }}
+                            <span class="error"></span>
+                        </div>
+                    </div>
+
+                    <div class="fields">
+                        <div class="field">
+                            {{ form_label(form.email, 'Adresse email*') }}
+                            {{ form_widget(form.email) }}
+                            {# {{ form_errors(form.email) }} #}
+                            <span class="error"></span>
+                        </div>
+                        <div class="field">
+                            {{ form_label(form.phoneNumber, 'Téléphone*') }}
+                            {{ form_widget(form.phoneNumber) }}
+                            {{ form_errors(form.phoneNumber) }}
+                            <span class="error"></span>
+                        </div>
+                    </div>
+
+                    <h5>Votre entreprise&nbsp;:</h5>
+                    <div class="field">
+                        {{ form_label(form.companyName, 'Raison Sociale*:') }}
+                        {{ form_widget(form.companyName) }}
+                        {{ form_errors(form.companyName) }}
+                        <span class="error"></span>
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.parcours, 'Racontez-nous quel est votre parcours ?') }}
+                        {{ form_widget(form.parcours) }}
+                        {{ form_errors(form.parcours) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.companyConcept, 'Expliquez le concept de votre entreprise en une phrase :') }}
+                        {{ form_widget(form.companyConcept) }}
+                        {{ form_errors(form.companyConcept) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.companyWebsite, 'Site internet de votre entreprise :') }}
+                        {{ form_widget(form.companyWebsite) }}
+                        {{ form_errors(form.companyWebsite) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.pratiqueResponsable, 'Quelles pratiques responsables sont déjà adoptées dans votre entreprise ?') }}
+                        {{ form_widget(form.pratiqueResponsable) }}
+                        {{ form_errors(form.pratiqueResponsable) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.companyComposition, 'Combien de personnes composent votre entreprise ?') }}
+                        {{ form_widget(form.companyComposition) }}
+                        {{ form_errors(form.companyComposition) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.companyCreationDate, 'Date de création de votre entreprise :') }}
+                        {{ form_widget(form.companyCreationDate) }}
+                        {{ form_errors(form.companyCreationDate) }}
+                        <span class="error"></span>
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.companyLocation, 'Ville de votre entreprise :') }}
+                        {{ form_widget(form.companyLocation) }}
+                        {{ form_errors(form.companyLocation) }}
+                    </div>
+
+                    <h5>Vos attentes:</h5>
+                    <div class="field">
+                        {{ form_label(form.motivation, 'Pourquoi souhaitez-vous participer au programme She’s Mercedes ?') }}
+                        {{ form_widget(form.motivation) }}
+                        {{ form_errors(form.motivation) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.problematic, 'Quelle(s) problématique(s) rencontrez-vous dans votre entreprise ?') }}
+                        {{ form_widget(form.problematic) }}
+                        {{ form_errors(form.problematic) }}
+                    </div>
+                    <div class="field">
+                        {{ form_label(form.accompagnementRSE, 'Quelles améliorations sociales ou environnementales aimeriez-vous engager ?') }}
+                        {{ form_widget(form.accompagnementRSE) }}
+                        {{ form_errors(form.accompagnementRSE) }}
+                    </div>
+
+                    <div class="field">
+                        <div>
+                            <p>À travers une courte vidéo, racontez-nous votre projet et en quoi le programme She's
+                                Mercedes pourrait vous aider (1min maximum - usage interne exclusivement) :</p>
+                            <label for="contact_form_video">
+                                <div class="warp-upload-file">
+                                    <div>
+                                        Rechercher un fichier vidéo <br>
+                                        <small>(250 Mo max. Formats : .MP4, .MOV, .WMV, .AVI, .MKV, .AVCHD, .MPEG-4,
+                                            .HEVC) </small>
+                                    </div>
+                                    <small class="file-name">
+                                    </small>
+                                    {{ form_widget(form.video) }}
+                                    <span class="error"></span>
+                                </div>
+                            </label>
+                        </div>
+                        <progress id="file-progress" value="0" max="100"></progress>
+                        <p id="progress-status" style="display: none;"></p>
+                        <p id="progress-loaded" style="display: none;"></p>
+                    </div>
+
+                    <p>Citez-nous des femmes entrepreneures françaises qui vous inspirent au quotidien<br>
+                        (et qui ne font pas déjà partie des
+                        mentores des saisons précédentes).</p>
+                    <div class="fields mentors">
+                        <div class="field">
+                            {{ form_widget(form.mentor1) }}
+                            {{ form_errors(form.mentor1) }}
+                        </div>
+                        <div class="field">
+                            {{ form_widget(form.mentor2) }}
+                            {{ form_errors(form.mentor2) }}
+                        </div>
+                        <div class="field">
+                            {{ form_widget(form.mentor3) }}
+                            {{ form_errors(form.mentor3) }}
+                        </div>
+                        <div class="field">
+                            {{ form_widget(form.mentor4) }}
+                            {{ form_errors(form.mentor4) }}
+                        </div>
+                        <div class="field">
+                            {{ form_widget(form.mentor5) }}
+                            {{ form_errors(form.mentor5) }}
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        {{ form_label(form.futureNews, 'Quels actualités ou projets souhaitez-vous partager ?') }}
+                        {{ form_widget(form.futureNews) }}
+                        {{ form_errors(form.futureNews) }}
+                    </div>
+
+                    <div class="field hasInstagram">
+                        <p>Avez-vous un compte Instagram professionnel ?</p>
+                        <div id="contact_form_hasInstagram">
+                            <label for="contact_form_hasInstagram_0" class="required">
+                                {{ form_widget(form.hasInstagram.0) }}
+                                <span class="label">Oui</span>
+                            </label>
+
+                            <label for="contact_form_hasInstagram_1" class="required">
+                                {{ form_widget(form.hasInstagram.1) }}
+                                <span class="label">Non</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field instagramAccountId">
+                        {{ form_label(form.instagramAccountId, 'Si oui, quel est le nom de votre compte ?') }}
+                        {{ form_widget(form.instagramAccountId) }}
+                        {{ form_errors(form.instagramAccountId) }}
+                    </div>
+
+                    <div class="field">
+                        <div class="optin">
+                            <label>
+                                {{ form_widget(form.optinReglement) }}
+                                <span class="label">J’accepte les conditions de participation du&nbsp;<a class="link" href="{{ asset('assets/documents/reglement-de-participation-au-programme.pdf') }}" target="_blank">règlement</a>&nbsp;à la saison 4 de She’s Mercedes.</span>
+                                <span class="error"></span>
+                                {{ form_errors(form.optinReglement) }}
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p>Oui, j’accepte de recevoir des offres et de la publicité personnalisées sur les produits et
+                            services de Mercedes-Benz France SASU / Mercedes-Benz Financial Services France SA :</p>
+                        <div class="optin">
+                            <label for="{{ form.optinPhoneCall.vars.id }}">
+                                {{ form_widget(form.optinPhoneCall) }}
+                                <span class="label">par téléphone (appels en direct)</span>
+                            </label>
+                            <label for="{{ form.optinEmailSMS.vars.id }}">
+                                {{ form_widget(form.optinEmailSMS) }}
+                                <span class="label">par voie électronique (ex : emails, SMS)</span>
+                            </label>
+                        </div>
+                        <p>En cochant ces cases, je consens au traitement de mes Données personnelles aux fins
+                            susmentionnées par Mercedes-Benz France SASU / Mercedes-Benz Financial Services France
+                            SA. </p>
+                    </div>
+
+                        {{ form_row(form.save, { 'label': 'Valider' }) }}
+
+                            <div id="loader" style="display: none";>
+                                <img src="{{ asset('assets/images/loader.gif') }}" alt="Loader" style="width: 50px;display: block; margin-left: auto;margin-right: auto;">
+                                <p style="color: #ff0000;font-weight: bold;text-align: center;">Ne fermez pas cet onglet, votre réponse sera envoyée dès que la vidéo aura été chargée</p>
+                            </div>
+
+
+                    </div>
+                {{ form_end(form) }}
+
+            </div>
+
+        </div>
+    </main>
+
+{% endblock %}
